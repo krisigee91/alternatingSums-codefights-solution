@@ -1,0 +1,35 @@
+function alternatingSums(a) {
+  
+  
+  var Arr1 = a;
+    Arr2 = [],
+    Arr3 = [];
+    Arr4 = [];
+
+for (var i=0;i<Arr1.length;i++){
+  //if statement that determines if the index when increased by 2 is still even/divisible by 2  
+    if ((i+2)%2===0) {
+      //if true, the element at that index is pushed to the array for even indexes
+        Arr3.push(Arr1[i]);
+    }
+    else {
+      //otherwise it is an odd index and will be pushed to the index for odd indexes 
+        Arr2.push(Arr1[i]);
+    }
+}
+
+var sum = Arr2.reduce(add, 0);
+var sum2 = Arr3.reduce(add,0);
+//function that finds the sum of the arrays
+function add(a, b) {
+    return a + b;
+}
+//the sums are then pushed to an array 
+Arr4.push(sum2);
+Arr4.push(sum);
+
+/*console.log(Arr2);
+console.log(Arr3);*/
+  return Arr4;
+}
+alternatingSums([50, 60, 60, 45, 70]);
