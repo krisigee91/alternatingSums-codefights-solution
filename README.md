@@ -1,0 +1,1 @@
+# alternatingSums-codefights-solution
